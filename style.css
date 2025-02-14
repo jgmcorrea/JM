@@ -348,3 +348,18 @@ section {
 #back-to-top:hover {
     background-color: #1EBE5D;
 }
+
+/*---------------------------------------------------- NOVECTUSGI --------------------------------------------*/
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.video-container iframe {
+    width: 80%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9; /* Mantém o tamanho proporcional */
+}
