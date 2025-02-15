@@ -1,15 +1,20 @@
 @charset "UTF-8";
+/* ------------------------------ GERAL ------------------------------ */
+
+/* -------------------- Tudo -------------------- */
 * {
     padding: 0;
     margin: 0;
 }
 
+/* -------------------- Body -------------------- */
 body {
-    background-color: rgb(3, 49, 74);
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(3, 49, 74); /* Fundo de todo o site */
+    color: white; /* Cor das letras no site */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Fonte do site */
 }
 
+/* -------------------- Header -------------------- */
 header {
     top: 0;
     left: 0;
@@ -51,7 +56,7 @@ header {
     color: white;
 }
 
-/* Menu de Hambúrguer */
+/* -------------------- Menu de Hamburger -------------------- */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -101,7 +106,7 @@ header {
     }
 }
 
-/*------------------------ SECTIONS ------------------------*/
+/* -------------------- SECTIONS -------------------- */
 section {
     display: flex;
     align-items: center; 
@@ -126,13 +131,111 @@ section {
     line-height: 1.5;
     
 }
-/*------------------------AGENCIA---------------------*/
+
+/* -------------------- CTA -------------------- */
+#cta {
+    text-align: center;
+    margin: 40px auto;
+}
+
+#cta a {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    font-size: 30px; /* Tamanho menor para melhorar a responsividade */
+    padding: 15px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+#cta a:hover {
+    background-color: #1EBE5D;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .cta-whatsapp a {
+        font-size: 24px; /* Tamanho menor para telas pequenas */
+        padding: 10px 20px;
+    }
+}
+/* -------------------- SOCIAL LINKS -------------------- */
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+#social-links a img {
+    width: 70px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+#social-links a img:hover {
+    transform: scale(1.1);
+}
+
+/* -------------------- Botão "Voltar ao Topo" -------------------- */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #1EBE5D;
+}
+
+/* ------------------------------ HOME ------------------------------ */
+
+/* -------------------- Quem somos -------------------- */
+
+/* -------------------- Missao -------------------- */
+
+/* ------------------------------ CONSULTORIA ------------------------------ */
+
+/* -------------------- Consultoria -------------------- */
+
+/* -------------------- Como Funciona -------------------- */
+
+/* ------------------------------ NOVECTUS ------------------------------ */
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.video-container iframe {
+    width: 80%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9; /* Mantém o tamanho proporcional */
+}
+
+
+/* ------------------------------ M2L DIGITAL ------------------------------ */
+
+/* -------------------- Agencia -------------------- */
 #agencia {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colunas */
     gap: 20px; /* Espaçamento entre colunas */
     align-items: center; /* Centraliza verticalmente */
-    padding: 100px 80px;
+    padding: 50px 100px;
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 50px;
@@ -156,7 +259,7 @@ section {
         order: -1;
     }
 }
-/*----------------------- ATUAÇÃO ------------------------*/
+/* -------------------- Atuação -------------------- */
 #atuacao {
     display: flex;
     flex-direction: column; /* Coloca o título acima dos quadrantes */
@@ -198,30 +301,36 @@ section {
         width: 200px;
     }
 }
-/*------------------------------- PRODUTOS ----------------------------*/
+/* -------------------- Produtos -------------------- */
 #produtos {
     display: flex;
     flex-direction: column; /* Coloca o título acima dos quadrantes */
     align-items: center; /* Centraliza o conteúdo */
-    padding: 100px 20px;
+    padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.section-content-2 {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colunas */
     gap: 20px; /* Espaçamento entre quadrantes */
+    
 }
 
 .quadrante-texto {
     background-color: white;
     color: rgb(55, 70, 82);
-    padding: 20px;
     border-radius: 8px;
     font-size: 22px;
     font-weight: bold;
     text-align: center; /* Centraliza o texto */
+    width: 400px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 /* Responsividade para telas menores */
@@ -230,15 +339,10 @@ section {
         grid-template-columns: 1fr;
     }
 }
-/*------------------------------- MÉTODO ----------------------------*/
+/* -------------------- Método -------------------- */
 #metodo {
     padding: 50px 0;
     text-align: center;
-}
-
-.section-content-metodo h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
 }
 
 .metodo-grid {
@@ -246,7 +350,7 @@ section {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
 .etapa {
@@ -282,84 +386,4 @@ section {
     .metodo-grid {
         grid-template-columns: 1fr; /* Apenas uma coluna */
     }
-}
-/*------------------------------------- CTA ---------------------------------*/
-.cta-whatsapp {
-    text-align: center;
-    margin: 40px auto;
-}
-
-.cta-whatsapp a {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    font-size: 30px; /* Tamanho menor para melhorar a responsividade */
-    padding: 15px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s ease-in-out;
-}
-
-.cta-whatsapp a:hover {
-    background-color: #1EBE5D;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .cta-whatsapp a {
-        font-size: 24px; /* Tamanho menor para telas pequenas */
-        padding: 10px 20px;
-    }
-}
-/*------------------------------------------ SOCIAL LINKS ------------------------------*/
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    margin-bottom: 20px;
-}
-.social-links a img {
-    width: 70px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-.social-links a img:hover {
-    transform: scale(1.1);
-}
-
-/* Botão "Voltar ao Topo" */
-#back-to-top {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#back-to-top:hover {
-    background-color: #1EBE5D;
-}
-
-/*---------------------------------------------------- NOVECTUSGI --------------------------------------------*/
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 50px 0;
-}
-
-.video-container iframe {
-    width: 80%;
-    max-width: 900px;
-    aspect-ratio: 16 / 9; /* Mantém o tamanho proporcional */
 }
